@@ -12,6 +12,7 @@ namespace Anexos
 {
     public partial class frmHome: Form
     {
+
         public frmHome()
         {
             InitializeComponent();
@@ -22,6 +23,15 @@ namespace Anexos
 
         }
 
+        public partial class frmStatusprocesso : Form
+        {
+
+        }
+
+        public partial class frmAjuda : Form
+        {
+
+        }
         private void btnNovoCliente_Click(object sender, EventArgs e)
         {
             frmNovoCliente novoCliente = new frmNovoCliente();
@@ -34,6 +44,18 @@ namespace Anexos
             FrmConsultarCliente consultarCliente = new FrmConsultarCliente();
             consultarCliente.Show();
             
+        }
+
+        private void btnStatusProcesso_Click(object sender, EventArgs e)
+        {
+            Form5 statusprocesso = new Form5();
+            statusprocesso.Show();
+        }
+
+        private void btnAjuda_Click(object sender, EventArgs e)
+        {
+            Form6 ajuda = new Form6();
+            ajuda.Show();
         }
     }
 }

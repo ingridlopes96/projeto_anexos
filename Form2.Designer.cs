@@ -109,6 +109,7 @@
             this.btnStatusProcesso.TabIndex = 6;
             this.btnStatusProcesso.Text = "&Status Processo";
             this.btnStatusProcesso.UseVisualStyleBackColor = false;
+            this.btnStatusProcesso.Click += new System.EventHandler(this.btnStatusProcesso_Click);
             // 
             // btnAjuda
             // 
@@ -122,6 +123,7 @@
             this.btnAjuda.TabIndex = 7;
             this.btnAjuda.Text = "&Ajuda";
             this.btnAjuda.UseVisualStyleBackColor = false;
+            this.btnAjuda.Click += new System.EventHandler(this.btnAjuda_Click);
             // 
             // frmHome
             // 
@@ -139,9 +141,9 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmHome";
-            this.RightToLeftLayout = true;
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.Load += new System.EventHandler(this.frmHome_Load);
