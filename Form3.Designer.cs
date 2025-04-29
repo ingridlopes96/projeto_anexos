@@ -356,9 +356,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnAjuda);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmNovoCliente";
             this.Load += new System.EventHandler(this.frmNovoCliente_Load);
