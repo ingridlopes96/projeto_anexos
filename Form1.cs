@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,24 +26,43 @@ namespace Anexos
 
         private void btnAcessar_Click(object sender, EventArgs e)
         {
-            string login = txtLogin.Text;
+            string usuario = txtLogin.Text;
             string senha = txtSenha.Text;
 
-            if (login == "admin" && senha == "admin")
+            string senhaHash = Criptografia.GerarHash(senha);
+
+            using (var conexao = Conexao.obterConexao())
             {
-                // Se a autenticação for bem-sucedida, abra o próximo formulário
-                frmHome home = new frmHome();
-                home.Show();
-                this.Hide(); // Esconde o formulário de login
-            }
-            else
-            {
-                MessageBox.Show("Nome de usuário ou senha incorretos.");
+                string query = "SELECT * FROM login WHERE usuario = @usuario AND senha = @senha";
+                MySqlCommand cmd = new MySqlCommand(query, conexao);
+                cmd.Parameters.AddWithValue("@usuario", usuario);
+                cmd.Parameters.AddWithValue("@senha", senhaHash);
+
+                var reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    MessageBox.Show("Login realizado com sucesso!");
+                    frmHome home = new frmHome();
+                    home.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario ou senha invalidos");
+                }
             }
         }
 
         private void progressBar1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            PrimeiroAcesso primeiroAcesso = new PrimeiroAcesso();
+            primeiroAcesso.Show();
+            this.Hide(); // Esconde o formulário de login
 
         }
     }

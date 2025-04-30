@@ -140,3 +140,4 @@ C:\Users\ingrid.slopes7\Desktop\anexos\backup - anexos\Anexos\obj\Debug\Anexos.c
 C:\Users\ingrid.slopes7\Desktop\anexos\backup - anexos\Anexos\obj\Debug\Anexos.csproj.Up2Date
 C:\Users\ingrid.slopes7\Desktop\anexos\backup - anexos\Anexos\obj\Debug\Anexos.exe
 C:\Users\ingrid.slopes7\Desktop\anexos\backup - anexos\Anexos\obj\Debug\Anexos.pdb
+C:\Users\ingrid.slopes7\Desktop\anexos\backup - anexos\Anexos\obj\Debug\Anexos.PrimeiroAcesso.resources
